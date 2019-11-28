@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sally Student Resume</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="application-root"></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+
+<script type="text/babel">
+    const appRoot = document.querySelector("#application-root");
+    function App(prop){
+        const sallyImg = `https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg`
+        const mailTo = `mailto:sallystudent@gmail.com?subject=Hire Sally`
+        return (
+            <div>
+                <header>
+                    <h1>{prop.studentName} Resume</h1>
+                    <img src={sallyImg} alt="Sally's Headshot"></img>
+                </header>
+                <address>
+                    <h2>Contact Information</h2>
+                    <p>Phone: (773)123-4567</p>
+                    <p>Email: <a href={mailTo}>sallystudent@gmail.com</a></p>
+                </address>
+                <main>
+                    <section>
+                        <h2>Education</h2>
+                        <p>B.A. Economics; University of Illinois; Graduated in 2016</p>
+                    </section>
+                    <section>
+                        <h2>Employment History</h2>
+                        <h3>CFO, Economy R Us</h3>
+                        <p>2018-Current; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h3>Accountant, Smith Accounting</h3>
+                        <p>2016-2018; Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </section>
+                </main>
+            </div>
+
+        );
+    };
+    ReactDOM.render(
+        <App 
+            studentName="Sally Student"
+        />,
+        appRoot);
+</script>
+
+</body>
+</html>
